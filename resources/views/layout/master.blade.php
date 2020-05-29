@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }} ">
+  <livewire:styles>
   <link rel="stylesheet" href="{{ asset('css/app.css') }} ">
   <title>MoviesVel</title>
 </head>
@@ -19,5 +20,6 @@
 
   <script src="{{ asset('js/jquery.min.js') }}"></script>
   <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
+  <livewire:scripts>
 </body>
 </html>
