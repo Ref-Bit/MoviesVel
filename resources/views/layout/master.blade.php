@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }} ">
   <livewire:styles>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <link rel="stylesheet" href="{{ asset('css/app.css') }} ">
   <title>MoviesVel</title>
 </head>
