@@ -3,7 +3,9 @@
 @section('content')
   <div class="movie-info border-b border-gray-800">
     <div class="container mx-auto p-4 flex flex-col md:flex-row">
-      <img src="{{ $movie['poster_path'] }}" alt="{{ $movie['original_title'] }}-Poster" class="w-64 md:w-96">
+      <div class="flex-none">
+        <img src="{{ $movie['poster_path'] }}" alt="{{ $movie['original_title'] }}-Poster" class="w-64 md:w-96">
+      </div>
       <div class="md:ml-16">
         <h2 class="text-4xl font-semibold">{{ $movie['original_title'] }}</h2>      
         <div class="flex flex-wrap items-center text-gray-400">
@@ -46,7 +48,7 @@
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         @foreach ($movie['cast'] as $cast) 
           <div class="mt-8">
-            <a href="#">
+            <a href="{{ route('actors.show', $cast['id']) }}">
               @if ($cast['profile_path'])
                 <img src="{{ 'https://image.tmdb.org/t/p/w300'.$cast['profile_path'] }}" alt="{{ $cast['name'] }}" class="hover:opacity-75 transition ease-in-out duration-150">
               @else
@@ -54,7 +56,7 @@
               @endif
             </a>
             <div class="mt-2">
-              <a href="#" class="text-lg mt-2 hover:text-gray-300">{{ $cast['name'] }}</a>
+              <a href="{{ route('actors.show', $cast['id']) }}" class="text-lg mt-2 hover:text-gray-300">{{ $cast['name'] }}</a>
               <p class="text-gray-400 text-sm">{{ $cast['character'] }}</p>
             </div>
           </div>

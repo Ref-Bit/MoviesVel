@@ -4,6 +4,10 @@
 
 @import 'https://fonts.googleapis.com/css?family=Jost:300,400,700,800';
 
+*{
+  overflow-x: hidden;
+}
+
 .active{
   color: #fff;
 }
@@ -16,4 +20,27 @@
   top: 1rem;
   right: 1rem;
   pointer-events: none;
+}
+
+.loader {
+  position: relative;
+  border-top-color: #ed8936;
+  -webkit-animation: loader 1.5s linear infinite;
+  animation: loader 1.5s linear infinite;
+  overflow: hidden;
+}
+
+@-webkit-keyframes loader {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes loader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#known-for{
+  max-height: 300px;
+  overflow: hidden;
 }

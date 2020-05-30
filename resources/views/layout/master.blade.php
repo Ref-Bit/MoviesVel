@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }} ">
+  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }} ">
   <livewire:styles>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <link rel="stylesheet" href="{{ asset('css/app.css') }} ">
@@ -21,6 +22,8 @@
 
   <script src="{{ asset('js/jquery.min.js') }}"></script>
   <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
   <livewire:scripts>
+  @stack('scripts')
 </body>
 </html>
