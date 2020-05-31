@@ -18,7 +18,7 @@ Responsive, touch-enabled and customizable.
 
 #### Getting Started
 
-- Run `php artisan generate:key` to generate Laravel's app key.
+- Run `php artisan key:generate` to generate Laravel's app key.
 - Run `composer install` to install composer packages.
 - Run `npm install` to install npm modules.
 - Login to your TMDB account and place your token in a new `.env` file under `TMDB_TOKEN` field.
