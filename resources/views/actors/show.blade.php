@@ -1,4 +1,5 @@
 @extends('layout.master')
+@section('title', $actor['name'])
 
 @section('content')
   <div class="actor-info border-b border-gray-800">
@@ -58,10 +59,10 @@
         <div id="known-for" class="owl-carousel owl-theme grid gap-8">
           @foreach ($knownFor as $item)
             <div class="item mt-4">
-              <a href="{{ $item['media_type'] === 'movie' ? route('movies.show', $item['id']) : route('movies.index') }}">
+              <a href="{{ $item['link_to_route'] }}">
                 <img src="{{ $item['poster_path'] }}" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
               </a>
-              <a href="{{ route('movies.show', $item['id']) }}" class="text-sm text-center leading-normal block text-gray-400 hover:text-white mt-1">{{ $item['title'] }}</a>
+              <a href="{{ $item['link_to_route'] }}" class="text-sm text-center leading-normal block text-gray-400 hover:text-white mt-1">{{ $item['title'] }}</a>
             </div>
           @endforeach
         </div>

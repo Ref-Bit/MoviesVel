@@ -1,4 +1,5 @@
 @extends('layout.master')
+@section('title', 'Actors')
 
 @section('content')
 <div class="container mx-auto px-4 pt-4">

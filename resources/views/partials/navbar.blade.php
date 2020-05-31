@@ -11,7 +11,7 @@
         <a href="{{ route('movies.index') }}" class="{{ request()->routeIs('movies.index') ? 'active' : 'hover:text-gray-300 transition duration-300' }}">Movies</a>
       </li>
       <li class="md:ml-6 mt-3 md:mt-0">
-        <a href="#" class="hover:text-gray-300 transition duration-300">TV Shows</a>
+        <a href="{{ route('tv.index') }}" class="{{ request()->routeIs('tv.index') ? 'active' : 'hover:text-gray-300 transition duration-300' }}">TV Shows</a>
       </li>
       <li class="md:ml-6 mt-3 md:mt-0">
         <a href="{{ route('actors.index') }}" class="{{ request()->routeIs('actors.index') ? 'active' : 'hover:text-gray-300 transition duration-300' }}">Actors</a>

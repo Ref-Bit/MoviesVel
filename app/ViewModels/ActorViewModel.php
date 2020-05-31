@@ -44,7 +44,7 @@ class ActorViewModel extends ViewModel
     {
         $knownTitles = collect($this->credits)->get('cast');
 
-        return collect($knownTitles)->map(function($mixed){
+        return collect($knownTitles)->sortByDesc('popularity')->map(function($mixed){
             if (isset($mixed['title'])) {
                 $title = $mixed['title'];
             } else if (isset($mixed['name'])) {
@@ -58,8 +58,11 @@ class ActorViewModel extends ViewModel
                     ? 'https://image.tmdb.org/t/p/w500'.$mixed['poster_path']
                     : 'https://via.placeholder.com/500x750',
                 'title' => $title,
+                'link_to_route' => $mixed['media_type'] === 'movie'
+                    ? route('movies.show', $mixed['id'])
+                    : route('tv.show', $mixed['id'])
             ]);
-        })->sortByDesc('popularity');
+        });
     }
 
     public function credits()

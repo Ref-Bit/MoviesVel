@@ -10,7 +10,7 @@
   <livewire:styles>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <link rel="stylesheet" href="{{ asset('css/app.css') }} ">
-  <title>MoviesVel</title>
+  <title>MoviesVel - @yield('title')</title>
 </head>
 <body class="font-jost bg-gray-900 text-white">
 
