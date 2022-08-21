@@ -2,6 +2,7 @@
 A web app about Movies, TV Shows and Actors.
 
 ***
+![Showcase](./public/showcase.png)
 
 #### Built With
 
